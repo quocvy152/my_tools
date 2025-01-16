@@ -1,0 +1,40 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+/* Global css */
+.text_600 {
+  font-weight: 600;
+}
+.mtb_5 {
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+/* End global css */
+img {
+  border: 0 !important;
+  outline: none !important;
+  -ms-interpolation-mode: bicubic;
+}
+p {
+  margin: 0px;
+  padding: 0px;
+}
+table {
+  border-collapse: collapse;
+}
+td,
+a,
+span {
+  border-collapse: collapse;
+  padding: 0px;
+}
+@media only screen and (max-width: 650px) {
+  .em_img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

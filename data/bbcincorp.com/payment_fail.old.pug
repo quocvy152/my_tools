@@ -1,0 +1,54 @@
+extends includes/layout.pug
+block css
+block body
+	tr(style="color:#404242;text-align:left;white-space:normal;font-family: Open Sans, Helvetica, Arial,sans-serif; font-size:16px;line-height:24px; background-color:#ffffff; box-shadow: 5px 5px 9px grey; ")
+		td(class="text" style="padding:50px 25px;")
+			table
+				tbody
+					tr
+						td
+							p Dear 
+								b #{name}
+								| ,
+							p Thank you for choosing BBCIncorp Limited’s services at 
+								a(href=`${website.domain}` target="_blank" data-saferedirecturl=`https://www.google.com/url?q=${website.domain}&amp;source=gmail&amp;ust=1558494745202000&amp;usg=AFQjCNGU4UZ1dGYCaEKYKxfQrPcbbkGL2g`) www.#{website.name}
+							p We are sorry that your payment #{your_order ? `for ${your_order}` : ''} was not successful yet. It could be failed by some reasons:
+							ul
+								li You canceled the payment;
+								li You have entered incorrect card expiration or CVV;
+								li Your credit has reached the limit;
+								li Computer or network error;
+								li Your card has insufficient balance to charge;…
+							p 
+								b You can take payment again for your order as the below information:
+							ol(type="A")
+								if your_order
+									li Company name or Invoice number: #{your_order}
+								li Payment Methods:
+									ol(style="padding-left:20px")
+										li Payment online:
+											br
+											| Your payment can be accepted through Debit/Credit Card through Stripe Gateway.
+											br
+											a(href=`${website.domain}/make-payment` style="color:white;background:#ab1e24;display:inline-block;padding:5px 10px;border-radius:5px;margin:10px 0" target="_blank" data-saferedirecturl=`https://www.google.com/url?q=${website.domain}/order-information?code%3D9da70abb7181572ffc81b5870f8ee043%26type%3D1&amp;source=gmail&amp;ust=1558494745202000&amp;usg=AFQjCNHBzucyXwDMBr2XDjZ7nA6v0-RE1w`) Make payment online here.
+										li Remittance/ Swift Transfer:
+											br
+											a(href=`${website.domain}/hk/payment-guideline` style="color:white;background:#ab1e24;display:inline-block;padding:5px 10px;border-radius:5px;margin:10px 0" target="_blank") Check our bank information here for your international/local bank transfer.
+							p If you have any query, please do not hesitate to contact us. Thank you!
+							p Best Regards,
+							p #{website.email_name}
+							p Think Before You Print!
+							p ==============================
+							p
+								i This email and any files transmitted with it are confidential and intended solely for the use of the individual 
+									| or entity to whom they are addressed. If you have received this email in error please notify the
+									| system manager. This message contains confidential information and is intended only for the individual
+									| named. If you are not the named addressee you should not disseminate, distribute or copy this e-mail. Please
+									| notify the sender immediately by e-mail if you have received this e-mail by mistake and delete this e-mail
+									| from your system. If you are not the intended recipient you are notified that disclosing, copying, distributing
+									| or taking any action in reliance on the contents of this information is strictly prohibited.
+							p
+								i All content within the email for reference purposes only. We are consulting company based on customer
+									| requirements, the advice given is based on the law of the host country. Therefore, we do not assume any
+									| liability from customers’s activities when they violate the rules or cheating involved in the home country.
+							p ==============================

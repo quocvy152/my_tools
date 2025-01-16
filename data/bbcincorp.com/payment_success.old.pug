@@ -1,0 +1,78 @@
+extends includes/layout.pug
+block css
+block body
+	tr(style="color:#404242;text-align:left;white-space:normal;font-family: Open Sans, Helvetica, Arial,sans-serif; font-size:16px;line-height:24px; background-color:#ffffff; box-shadow: 5px 5px 9px grey; ")
+		td(class="text" style="padding:50px 25px;")
+			table
+				tbody
+					tr
+						td
+							p Dear 
+								b #{name}
+								| ,
+							p Thank you for choosing 
+								a(href=`${website.domain}` target="_blank" data-saferedirecturl=`https://www.google.com/url?q=${website.domain}&amp;source=gmail&amp;ust=1558494745874000&amp;usg=AFQjCNEMS3JHoCIPbmpTfX0C-3Ji6efCqg`) www.#{website.name} 
+								| and get payment for our service.
+							p Please double check for making sure your payment is correct. 
+								| Any change after approved will be charged or notified by email to us.
+							p.mtb_5 SECURE ONLINE PAYMENT Details:
+							table(cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:collapse")
+								tbody
+									tr
+										td.text_600(colspan="3") Full Name:
+										td(colspan="9") #{name}
+									tr
+										td.text_600(colspan="3") Email Address: 
+										td(colspan="9") 
+											a(href=`mailto:${email}` target="_blank") #{email}
+									if amount
+										tr
+											td.text_600(colspan="3") Amount:
+											td(colspan="9") #{amount} USD
+									if payment_method
+										tr
+											td.text_600(colspan="3") Payment Methods:
+											td(colspan="9") #{payment_method}
+									if your_order
+										tr
+											td.text_600(colspan="3") Payment for:
+											td(colspan="9") #{your_order}
+									if description
+										tr
+											td.text_600(colspan="3") Note for payment:
+											td(colspan="9") #{description}
+							p Note: Your card statement for this transaction might show the
+								| charged amount in HKD equivalent to the amount in USD
+								| performed in order notification. The exchange rate depends
+								| on Stripe/Paypal rate or your bank's rate at payment time.
+							p Please feel free to contact us via email: 
+								a(href=`mailto:${website.email_contact}` target="_blank") #{website.email_contact} 
+								| if you have any further questions or concerns. Thank you!
+							p If you have any query, please do not hesitate to contact us. Thank you!
+							p Best Regards,
+							p #{website.email_name}
+							p Think Before You Print!
+							p ==============================
+							p 
+								i This email and any files transmitted with it are
+									|confidential and intended solely for the use of the
+									| individual or entity to whom they are addressed. If you
+									| have received this email in error please notify the
+									| system manager. This message contains confidential
+									| information and is intended only for the individual
+									| named. If you are not the named addressee you should not
+									| disseminate, distribute or copy this e-mail. Please
+									| notify the sender immediately by e-mail if you have
+									| received this e-mail by mistake and delete this e-mail
+									| from your system. If you are not the intended recipient
+									| you are notified that disclosing, copying, distributing
+									| or taking any action in reliance on the contents of this
+									| information is strictly prohibited.
+							p 
+								i All content within the email for reference purposes only.
+									| We are consulting company based on customer
+									| requirements, the advice given is based on the law of
+									| the host country. Therefore, we do not assume any
+									| liability from customers’s activities when they violate
+									| the rules or cheating involved in the home country.
+							p ==============================

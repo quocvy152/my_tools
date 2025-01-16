@@ -1,0 +1,64 @@
+.ft_header {
+  white-space: normal;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  color: #404242;
+  background-color: #efefef;
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 40px;
+}
+.ft_address {
+  white-space: normal;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #898989;
+}
+.contact-footer {
+  text-align: center;
+  background-color: #efefef;
+  margin-top: 22px;
+  padding-bottom: 70px;
+  font-size: 14px;
+  color: #898989;
+  margin-bottom: 70px;
+}
+.contact-footer tbody {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.contact-footer td {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.contact-footer img {
+  margin-right: 8px;
+}
+@media only screen and (max-width: 650px) {
+  .body_table {
+    width: 100% !important;
+  }
+  .em_h20 {
+    height: 20px !important;
+  }
+  .contact-footer td {
+    font-size: 13px;
+  }
+  .ft_img1{
+    width: 45%;
+  }
+  .ft_img2{
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .body_table {
+    font-size: 11px !important;
+  }
+  .contact-footer {
+    font-size: 11px !important;
+  }
+}

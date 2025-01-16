@@ -1,0 +1,101 @@
+extends includes/layout.pug
+block css
+block body
+	tr(style="color:#404242;text-align:left;white-space:normal;font-family: Open Sans, Helvetica, Arial,sans-serif; font-size:16px;line-height:24px; background-color:#ffffff; box-shadow: 5px 5px 9px grey; ")
+		td(class="text" style="padding:50px 25px;")
+			table
+				tbody
+					tr
+						td
+							.container(style="max-width: 800px; margin: 0 auto;")
+								h1(style="text-align: center; font-size: 20px; color: #000;") ORDER CONFIRMATION
+								p Dear 
+									b #{name},
+								br
+								p Thank you for your order!
+								br
+								p Below you will find your order summary and payment information. Our Relationship Manager will be in touch with you shortly to provide guidance on the next steps for company incorporation.
+
+								h2(style="font-size: 16px; color: #000; margin: 20px 0; text-align: center;") Order No: #{your_order}
+								hr(style="border: 0; border-top: 2px solid rgb(212, 212, 212);")
+
+								h3(style="font-size: 16px; margin-bottom: 10px; color: #0b5394;") Company formation
+								p Incorporation in:
+								p Company name:
+								p Company type:
+
+								hr(style="border: 0; border-top: 2px solid rgb(212, 212, 212);")
+
+								h3(style="font-size: 16px; margin-bottom: 10px; color: #0b5394;") Company package
+								p Incorporation of Anguilla Company (BC) - Premium Package
+
+								ul(style="list-style: disc; padding-left: 20px;")
+									li One-time banking support
+									li Discount for banking support - US$99
+									li Anguilla - Incorporation fee - US$999
+
+								hr(style="border: 0; border-top: 2px solid rgb(212, 212, 212);")
+								h3(style="font-size: 16px; color: #0b5394;") Additional services
+
+								ul(style="list-style: disc; padding-left: 20px;")
+									li Virtual Office in Hong Kong - Basic package (12 months) (1 month) - US$708
+									li Sub-incorporation
+										ul(style="list-style: circle; padding-left: 20px;")
+										li Nominee Director (1 position) - US$499
+									li Document retrieval services
+										ul(style="list-style: circle; padding-left: 20px;")
+										li Certificate of Good Standing (2 documents) - US$598
+
+								hr(style="border: 0; border-top: 2px solid rgb(212, 212, 212);")
+
+								div(style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;")
+									p(style="font-weight: bold; font-size: 18px; color: #0b5394; margin: 0;") Total price
+									div(style="text-align: right;")
+										p(style="font-weight: bold; font-size: 18px; color: #0b5394; margin: 0;") US$1,399
+										p(style="font-weight: bold; font-size: 16px; color: #0b5394; margin: 0;") Equivalent amount of HK$10,990
+
+
+								.button-container(style="text-align: center; margin: 40px 0;")
+									a(href="#", style="display: inline-block; padding: 4px 50px; border: 2px solid #0b5394; color: black; text-decoration: none; text-align: center; font-weight: bold;") VIEW ORDER
+									
+								div(style="width: 100%; max-width: 600px; border: 1px solid #000; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5;")
+									div(style="font-weight: bold; padding: 10px; border-bottom: 1px solid #000; font-size: 16px;")
+										h3(style="font-size: 16px; color: #0b5394;") Payment information (Order No: #{your_order})
+									div(style="padding: 10px;")
+										div(style="display: flex; justify-content: space-between;")
+											div(style="text-align: left; font-weight: bold;")
+												| Full name:
+											div
+												| Customer name
+										div(style="display: flex; justify-content: space-between;")
+											div(style="text-align: left; font-weight: bold;")
+												| Email address:
+											div
+												a(href="mailto:abc@gmail.com", style="color: #0b5394; text-decoration: none;") abc@gmail.com
+										div(style="display: flex; justify-content: space-between;")
+											div(style="text-align: left; font-weight: bold;")
+												| Payment method:
+											div
+												| International Card via Stripe Gateway
+										div(style="display: flex; justify-content: space-between;")
+											div(style="text-align: left; font-weight: bold;")
+												| Total:
+											div
+												| 2000 USD
+										div(style="display: flex; justify-content: space-between;")
+											div(style="text-align: left; font-weight: bold;")
+												| Amount paid:
+											div
+												| 2000 USD
+
+								p(style="font-size: 12px; color: #555;") * Your card statement for this transaction may display the charged amount in Hong Kong Dollars (HKD), which is equivalent to the amount in US Dollars (USD) indicated in the order summary. The specific exchange rate used will be determined by either Stripe rate or your bank's rate at the time of payment.
+								br
+
+								p 
+									b If you have any further questions, please do not hesitate to contact us for support.
+
+								p(style="margin-top: 20px;") 
+									b Best regards,
+								p(style="font-weight: bold;") BBCIncorp Team
+
+								p.footer-note(style="font-size: 12px; color: #666; margin-top: 20px; font-weight: bold;") IMPORTANT: This email may contain confidential information and is intended for the use of the recipient(s) only. Please be aware that any use, reproduction, or distribution of this message is strictly prohibited. If you received this in error, please contact the sender and immediately delete this email and any attachments.

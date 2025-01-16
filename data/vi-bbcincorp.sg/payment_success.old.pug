@@ -1,0 +1,70 @@
+extends includes/layout.pug
+block css
+block body
+	tr(style="color:#404242;text-align:left;white-space:normal;font-family: Open Sans, Helvetica, Arial,sans-serif; font-size:16px;line-height:24px; background-color:#ffffff; box-shadow: 5px 5px 9px grey; ")
+		td(class="text" style="padding:50px 25px;")
+			table
+				tbody
+					tr
+						td
+							p Xin chào 
+								b #{name}
+								| ,
+							p Cám ơn khách hàng đã tin tưởng và lựa chọn sửa dụng dịch vụ tại 
+								a(href=`${website.domain}` target="_blank" data-saferedirecturl=`https://www.google.com/url?q=${website.domain}&amp;source=gmail&amp;ust=1558494745874000&amp;usg=AFQjCNEMS3JHoCIPbmpTfX0C-3Ji6efCqg`) www.#{website.domain.substr(8)}
+							p Khách hàng vui lòng kiểm tra lại 
+								span.text_600 thông tin xác nhận
+								| . 
+								| Sau khi xác nhận email này, bất cứ thông tin nào khách hàng có nhu cầu thay đổi 
+								| vui lòng liên hệ ngay cho chúng tôi.
+							p.mtb_5.text_600 CHI TIẾT GIAO DỊCH
+							table(cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:collapse")
+								tbody
+									tr
+										td.text_600(colspan="5") Tên Khách hàng:
+										td(colspan="7") #{name}
+									tr
+										td.text_600(colspan="5") Địa chỉ email: 
+										td(colspan="7") 
+											a(href=`mailto:${email}` target="_blank") #{email}
+									if amount
+										tr
+											td.text_600(colspan="5") Số tiền:
+											td(colspan="7") #{amount} USD
+									if payment_method
+										tr
+											td.text_600(colspan="5") Phương thức thanh toán:
+											td(colspan="7") #{payment_method}
+									if your_order
+										tr
+											td.text_600(colspan="5") Nội dung thanh toán(tên doanh nghiệp hoặc số hóa đơn):
+											td(colspan="7") #{your_order}
+									if description
+										tr
+											td.text_600(colspan="5") Ghi chú (nếu có):
+											td(colspan="7") #{description}
+							p Khách hàng vui lòng lưu ý số tiền giao dịch thông báo trên thẻ của khách hàng 
+								| có thể được hiển thị theo mệnh giá Singapore (SGD) đã được quy đổi theo tỉ giá đô la Mỹ (USD) 
+								| ở thời điểm giao dịch diễn ra.
+								| Tỉ giá chuyển đổi tiền tệ phụ thuộc vào tỉ giá của cổng thanh toán Stripe hoặc 
+								| ngân hàng chủ thẻ của khách hàng ở thời điểm giao dịch. 
+							p Mọi thắc mắc về thông tin giao dịch vui lòng gửi email đến địa chỉ 
+								a(href=`mailto:${website.email_contact}` target="_blank") #{website.email_contact}
+								| .
+							p Xin cám ơn và chúc khách hàng trải nghiệm dịch vụ tốt đẹp.
+							p Trân trọng,
+							p #{website.email_name}
+							p ==============================
+							p 
+								i Nội dung email này chỉ được gửi và chỉ nhằm mục đích cho đúng người nhận. 
+									| Nếu Khách hàng không đúng người nhận liên quan thì 
+									| email này đã được gửi đến Khách hàng do sai sót. 
+									| Bất kỳ tiết lộ, sao chép, phân phối hoặc hành động dựa trên 
+									| các thông tin trên email là bị cấm và có thể là trái pháp luật. 
+									| Nếu Khách hàng vô tình nhận được email này, xin vui lòng liên hệ với hệ thống BBCINCorp Pre Ltd và 
+									| xóa email này trong máy tính của Khách hàng.
+							p 
+								i Chúng tôi tư vấn dựa trên yêu cầu của Khách hàng dựa trên luật pháp của nước sở tại. 
+									| Chúng tôi không chịu bất kỳ trách nhiệm pháp lý nào từ các hoạt động của Khách hàng khi 
+									| vi phạm các quy tắc hoặc gian lận liên quan đến nước sở tại.
+							p ==============================

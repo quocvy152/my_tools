@@ -1,0 +1,53 @@
+extends includes/layout.pug
+block css
+block body
+	tr(style="color:#404242;text-align:left;white-space:normal;font-family: Open Sans, Helvetica, Arial,sans-serif; font-size:16px;line-height:24px; background-color:#ffffff; box-shadow: 5px 5px 9px grey; ")
+		td(class="text" style="padding:50px 25px;")
+			table
+				tbody
+					tr
+						td
+							p Xin chào 
+								b #{name}
+								| ,
+							p Cám ơn khách hàng đã tin tưởng và lựa chọn sử dụng dịch vụ tại 
+								a(href=`${website.domain}` target="_blank" data-saferedirecturl=`https://www.google.com/url?q=${website.domain}&amp;source=gmail&amp;ust=1558494745202000&amp;usg=AFQjCNGU4UZ1dGYCaEKYKxfQrPcbbkGL2g`) www.#{website.domain.substr(8)}
+							p Tuy nhiên, chúng tôi rất tiếc khi phải thông báo:
+							p Thanh toán #{your_order ? `for ${your_order}` : ''} của khách hàng chưa thành công.
+							p Sau đây là một số nguyên nhân có thể dẫn đến việc thanh toán thất bại:
+							ul
+								li Khách hàng đã hủy thanh toán;
+								li Thông tin thẻ (ngày hết hạn, CVV) chưa đúng;
+								li Số dư tài khoản của khách hàng không đủ;
+								li Lỗi kỹ thuật/ sự cố mạng internet;
+							p 
+								b Khách hàng vui lòng thanh toán lại hoặc sử dụng các phương thức thanh toán khác để trải nghiệm dịch vụ tốt nhất tại BBCIncorp Pre Ltd.
+							p Thông tin thanh toán sử dụng dịch vụ BBCIncorp như sau:
+							ol(type="A")
+								if your_order
+									li Số order: #{your_order}
+								li Phương thức thanh toán:
+									ol(style="padding-left:20px")
+										li Thanh toán online bằng Debit/Credit card qua cổng thanh toán Stripe tại đây
+											br
+											a(href=`${website.domain}/cong-thanh-toan-truc-tuyen` style="color:white;background:#ab1e24;display:inline-block;padding:5px 10px;border-radius:5px;margin:10px 0" target="_blank" data-saferedirecturl=`https://www.google.com/url?q=${website.domain}/order-information?code%3D9da70abb7181572ffc81b5870f8ee043%26type%3D1&amp;source=gmail&amp;ust=1558494745202000&amp;usg=AFQjCNHBzucyXwDMBr2XDjZ7nA6v0-RE1w`) Thanh toán online.
+										li Chuyển khoản đến thông tin tài khoản như sau:
+											br
+											a(href=`${website.domain}/huong-dan-thanh-toan` style="color:white;background:#ab1e24;display:inline-block;padding:5px 10px;border-radius:5px;margin:10px 0" target="_blank") Thanh toán chuyển tiền ngân hàng địa phương/quốc tế đến thông tin tài khoản của chúng tôi tại đây.
+							p Xin cám ơn khách hàng.
+							p Trân trọng,
+							p #{website.email_name}
+							p ==============================
+							p 
+								i Nội dung email này chỉ được gửi và chỉ nhằm mục đích cho đúng người nhận. 
+									| Nếu Khách hàng không đúng người nhận liên quan thì 
+									| email này đã được gửi đến Khách hàng do sai sót. 
+									| Bất kỳ tiết lộ, sao chép, phân phối hoặc hành động dựa trên 
+									| các thông tin trên email là bị cấm và có thể là trái pháp luật. 
+									| Nếu Khách hàng vô tình nhận được email này, xin vui lòng liên hệ với hệ thống BBCINCorp Pre Ltd và 
+									| xóa email này trong máy tính của Khách hàng.
+							p 
+								i Chúng tôi tư vấn dựa trên yêu cầu của Khách hàng dựa trên luật pháp của nước sở tại. 
+									| Chúng tôi không chịu bất kỳ trách nhiệm pháp lý nào từ các hoạt động của Khách hàng khi 
+									| vi phạm các quy tắc hoặc gian lận liên quan đến nước sở tại.
+							p ==============================

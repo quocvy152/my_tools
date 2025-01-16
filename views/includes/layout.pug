@@ -1,0 +1,17 @@
+doctype html
+html(⚡4email='')
+  head
+    style
+      include header.css
+      include footer.css
+      block css
+  body.bg(style='margin:0px; padding:0px;', bgcolor='#efefef')
+    table.main_table(width='100%', border='0', cellspacing='0', cellpadding='0', align='center', style='background-color: #efefef;height: 100%;')
+      tbody
+        tr
+          td
+            table.bodyTable(width='600', border='0', cellspacing='0', cellpadding='0', align='center', style='width:600px;')
+              tbody
+                include header.pug
+                block body
+                include footer.pug
